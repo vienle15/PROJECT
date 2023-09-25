@@ -1,0 +1,28 @@
+form .container {
+  background-color: white !important;
+}
+.check-forget {
+  justify-content: space-between;
+}
+
+.full {
+  text-align: center;
+}
+img.login-logo {
+  width: 100px !important;
+}
+button.login {
+  border-radius: 5px;
+  padding: 5px;
+}
+button.login:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+.card {
+  width: 600px !important;
+}
+.login-input {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,235 @@
+:root {
+    --color-primary: #c48fb9;
+    --color-secondary: #dd91d4;
+    --color-accent: #a1c6d1;
+  }
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  #label-smooth {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  header img {
+    width: 40px !important;
+  }
+  img {
+    width: 100%;
+  }
+  .container {
+    max-width: 1920px;
+    background-color: var(--color-accent);
+  }
+  /* header {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 50px !important;
+  } */
+  .something {
+    margin: 50px 0;
+    display: flex;
+    gap: 20px;
+  }
+  .something-img {
+    border-radius: 50%;
+    width: 40%;
+  }
+  .text-something {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+  }
+  .navbar {
+    background: var(--color-primary);
+    /* align-items: center;
+    justify-content: center; */
+  }
+  li button.sign-in {
+    padding: 0 10px;
+  }
+  .info li {
+    padding: 0 10px;
+    list-style-type: none;
+  }
+  button.sign-in:hover {
+    background-color: rgba(60, 56, 56, 0.138);
+  }
+  /* .bg-grey {
+    background-color: #f5f5f5;
+    padding: 0 10px;
+  } */
+  .top-cart {
+    border: 1px solid gray;
+    padding: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+  }
+  .top-cart-top {
+    display: flex;
+  }
+  .top-cart:hover {
+    background: salmon;
+    cursor: pointer;
+  }
+  .top-bar {
+    background-color: var(--color-accent);
+  }
+  
+  .carousel-item > p {
+    text-transform: uppercase;
+  }
+  #carouselExampleSlidesOnly {
+    text-align: center;
+    padding: 15px 0;
+    background-color: var(--color-accent);
+    justify-content: center;
+    align-items: center;
+  }
+  .middle-promo {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .middle-promo h1 {
+    font-size: 80px;
+    font-weight: bolder;
+    color: #111111;
+  }
+  .middle-promo-btn {
+    padding: 10px 30px;
+    background-color: black;
+    border-style: none;
+    border-radius: 20px;
+    color: white;
+    margin-top: 30px;
+  }
+  .carousel-inner {
+    display: flex;
+  }
+  .sign-in {
+    border-style: none;
+    background-color: var(--color-accent);
+    justify-content: center;
+  }
+  
+  .sign-in > a {
+    text-decoration: none;
+    color: black;
+  }
+  .carousel-item {
+    position: relative;
+    /* display: none; */
+    /* float: left; */
+  
+    /* margin-right: -100%; */
+    -webkit-backface-visibility: hidden;
+    overflow-x: scroll;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+  }
+  /* .card-body h5 {
+    height: 50px;
+  } */
+  
+  /* list slide custom carousel */
+  .list-card {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .card-img-top {
+    object-fit: contain;
+  }
+  .row {
+    height: fit-content;
+  }
+  
+  .btn-after {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 70px;
+  }
+  
+  .btn-before {
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 70px;
+  }
+  
+  .card {
+    min-width: 200px;
+    overflow: hidden;
+  }
+  
+  #contai-custom-slide {
+    position: relative;
+  }
+  
+  #carousel-banner .row {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .card img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .products-main h1 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+    margin: 50px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  .bg-text h1 {
+    text-transform: uppercase;
+  }
+  .random-products {
+    display: flex;
+  }
+  
+  /* section.secContent {
+    padding: 20px;
+  } */
+  @media (max-width: 576px) {
+    .something {
+      display: block;
+    }
+  }
+  @media (min-width: 768px) {
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+  @media (min-width: 1400px) {
+  }
+  /* objecfit:cover
+  width:100% */
+  
