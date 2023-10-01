@@ -6,6 +6,15 @@
 .btn-group button {
   color: black;
 }
+.btn.btn-search {
+  border: 1px solid black;
+}
+.col-12.col-md-4.col-lg-2 {
+  display: flex;
+}
+.btn.btn-search:hover {
+  background-color: #2f9cc4;
+}
 .ml-2-1 {
   color: red;
 }
@@ -52,4 +61,34 @@ table#product-list td.max-width {
 }
 .img-fluid {
   height: 70px !important;
+}
+.e-table {
+  margin-top: 20px;
+}
+
+.e-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.e-table th,
+.e-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+.e-table th {
+  background-color: #ccc;
+}
+
+.e-table td {
+  border-bottom: 1px solid #ddd;
+}
+
+.e-table tr:hover {
+  background-color: #eee;
+}
+
+.e-table .btn-group {
+  text-align: center;
 }

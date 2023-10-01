@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <title>Account Info</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -24,6 +24,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/src/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="/src/pages/customer/product-detail/style.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -51,12 +55,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" href="/index.html">Home</a>
+                <a class="nav-link" href="/index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="src/pages/customer/products/index.html"
+                  href="/src/pages/customer/products/index.html"
                   >Products</a
                 >
               </li>
@@ -84,107 +88,47 @@
         </div>
       </nav>
     </header>
-
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
-          <div class="d-table-cell align-middle">
-            <div class="text-center mt-4">
-              <p class="lead">Fill The Form To Register</p>
-            </div>
-
-            <div class="card">
-              <div class="card-body">
-                <div class="m-sm-4">
-                  <form id="myForm">
-                    <div class="form-group">
-                      <label for="name">Họ tên</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="name"
-                        placeholder="Nhập tên của bạn"
-                        id="name"
-                      />
-                      <p class="error" id="error-name"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="address">Địa chỉ</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="name"
-                        placeholder="Nhập địa chỉ của bạn"
-                        id="address"
-                      />
-                      <p class="error" id="error-address"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="mail"
-                        name="name"
-                        placeholder="Nhập Email của bạn"
-                        id="email"
-                      />
-                      <p class="error" id="error-email"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="phone">Số điện thoại</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="tel"
-                        name="name"
-                        placeholder="Nhập số điện thoại của bạn"
-                        id="phone"
-                      />
-                      <p class="error" id="error-phone"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Mật khẩu</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="password"
-                        name="password"
-                        placeholder="nhập mật khẩu"
-                        id="password"
-                      />
-                      <p class="error" id="error-password"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="password-repeat">Xác nhận mật khẩu</label>
-
-                      <input
-                        class="form-control form-control-lg"
-                        type="password"
-                        name="password"
-                        placeholder="Xác nhận mật khẩu"
-                        id="password-repeat"
-                      />
-                      <p class="error" id="error-repeat-password"></p>
-                    </div>
-
-                    <div class="text-center mt-3">
-                      <!-- <a href="index.html" class="btn btn-lg btn-primary"
-                          >Đăng ký</a
-                        > -->
-                      <button
-                        onclick="handleAdd(event)"
-                        class="btn btn-lg btn-primary"
-                      >
-                        Đăng ký
-                      </button>
-                    </div>
-                  </form>
+    <main class="container">
+      <div class="card">
+        <div class="container-fliud">
+          <div class="wrapper row">
+            <div class="preview col-md-6">
+              <div class="preview-pic tab-content">
+                <div class="tab-pane active" id="pic-1">
+                  <img
+                    src="https://cdn.pixabay.com/photo/2023/08/10/03/39/woman-8180638_640.jpg"
+                  />
                 </div>
               </div>
+            </div>
+            <div class="details col-md-6">
+              <h3 class="product-title">Nguyễn Lê Võ Phan</h3>
+              <div class="rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <p class="product-description">
+                Suspendisse quos? Tempus cras iure temporibus? Eu laudantium
+                cubilia sem sem! Repudiandae et! Massa senectus enim minim
+                sociosqu delectus posuere.
+              </p>
+              <h4 class="price">current point: <span>1500</span></h4>
+              <p class="vote">
+                <strong>Suspendisse quos?</strong> Suspendisse quos? Tempus cras
+                iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et!
+                Massa senectus enim minim sociosqu delectus posuere.
+              </p>
+              <strong>(87 visiter)</strong>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </main>
     <footer class="text-center text-lg-start bg-light text-muted">
       <!-- Section: Social media -->
       <section
@@ -311,9 +255,9 @@
     </footer>
   </body>
   <script src="/utils/method.js"></script>
-  <script src="script.js"></script>
-  
   <script src="/models/data.js"></script>
   <script src="/src/pages/components/header.js"></script>
-</html>
+
+  <script src="/assets/js/script.js"></script>
+  <script src="/pages/auth/logout/script.js"></script>
 </html>

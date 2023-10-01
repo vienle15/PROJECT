@@ -51,3 +51,6 @@ button:not(:disabled) {
 .blocked {
   background-color: red !important;
 }
+.col-12.col-md-4.col-lg-2 {
+  display: flex !important;
+}

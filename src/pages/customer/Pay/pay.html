@@ -3,35 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/src/assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>pay</title>
   </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="/src/assets/css/style.css" />
+  <link rel="stylesheet" href="pay.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -84,107 +85,154 @@
         </div>
       </nav>
     </header>
-
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
-          <div class="d-table-cell align-middle">
-            <div class="text-center mt-4">
-              <p class="lead">Fill The Form To Register</p>
-            </div>
-
-            <div class="card">
-              <div class="card-body">
-                <div class="m-sm-4">
-                  <form id="myForm">
-                    <div class="form-group">
-                      <label for="name">Họ tên</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="name"
-                        placeholder="Nhập tên của bạn"
-                        id="name"
-                      />
-                      <p class="error" id="error-name"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="address">Địa chỉ</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="name"
-                        placeholder="Nhập địa chỉ của bạn"
-                        id="address"
-                      />
-                      <p class="error" id="error-address"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="mail"
-                        name="name"
-                        placeholder="Nhập Email của bạn"
-                        id="email"
-                      />
-                      <p class="error" id="error-email"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="phone">Số điện thoại</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="tel"
-                        name="name"
-                        placeholder="Nhập số điện thoại của bạn"
-                        id="phone"
-                      />
-                      <p class="error" id="error-phone"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Mật khẩu</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="password"
-                        name="password"
-                        placeholder="nhập mật khẩu"
-                        id="password"
-                      />
-                      <p class="error" id="error-password"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="password-repeat">Xác nhận mật khẩu</label>
-
-                      <input
-                        class="form-control form-control-lg"
-                        type="password"
-                        name="password"
-                        placeholder="Xác nhận mật khẩu"
-                        id="password-repeat"
-                      />
-                      <p class="error" id="error-repeat-password"></p>
-                    </div>
-
-                    <div class="text-center mt-3">
-                      <!-- <a href="index.html" class="btn btn-lg btn-primary"
-                          >Đăng ký</a
-                        > -->
-                      <button
-                        onclick="handleAdd(event)"
-                        class="btn btn-lg btn-primary"
-                      >
-                        Đăng ký
+    <div class="checkout-section mt-150 mb-150">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="checkout-accordion-wrap">
+              <div class="accordion" id="accordionExample">
+                <div class="card single-accordion">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" type="button">
+                        Billing Address
                       </button>
+                    </h5>
+                  </div>
+
+                  <div
+                    id="collapseOne"
+                    class="collapse show"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordionExample"
+                  >
+                    <div class="card-body">
+                      <div class="billing-address-form">
+                        <form action="index.html">
+                          <p>
+                            <input id="reName" type="text" placeholder="Name" />
+                          </p>
+                          <p>
+                            <input
+                              id="reEmail"
+                              type="email"
+                              placeholder="Email"
+                            />
+                          </p>
+                          <p>
+                            <input
+                              id="reAddress"
+                              type="text"
+                              placeholder="Address"
+                            />
+                          </p>
+                          <p>
+                            <input
+                              id="rePhone"
+                              type="number"
+                              placeholder="Phone"
+                            />
+                          </p>
+                          <p>
+                            <textarea
+                              name="bill"
+                              id="note"
+                              cols="30"
+                              rows="10"
+                              placeholder="Say Something"
+                            ></textarea>
+                          </p>
+                        </form>
+                      </div>
                     </div>
-                  </form>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="order-details-wrap">
+              <table class="order-details" style="width: 100%">
+                <thead>
+                  <tr>
+                    <th colspan="3">Your order Details</th>
+                  </tr>
+                </thead>
+                <tbody class="order-details-body">
+                  <tr>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Total</td>
+                  </tr>
+                </tbody>
+                <tbody id="show"></tbody>
+                <tbody class="checkout-details">
+                  <tr>
+                    <td>Shipping</td>
+                    <td colspan="2">45$</td>
+                  </tr>
+                </tbody>
+                <tbody class="checkout-details">
+                  <tr>
+                    <td>Subtotal</td>
+                    <td id="sum" colspan="2">0$</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="full-payment mt-3 d-flex justify-content-between">
+                <div class="payment-delivery d-flex">
+                  <label class="m-0">Payment on delivery</label>
+                  <input
+                    type="radio"
+                    style="width: 20px"
+                    class="ml-2"
+                    checked
+                    name="paymentMethod"
+                    value="home"
+                  />
+                </div>
+                <div class="payment-cart d-flex">
+                  <label class="m-0">Payment by credit card</label>
+                  <input
+                    type="radio"
+                    style="width: 20px"
+                    class="ml-2"
+                    name="paymentMethod"
+                    value="payment"
+                  />
+                </div>
+              </div>
+              <div id="form-payment" class="full-payment mt-3">
+                <div class="payment-delivery">
+                  <label class="m-0">Cart</label>
+                  <input
+                    id="cartNumber"
+                    type="number"
+                    class="m-0"
+                    placeholder="xxx-xxx-xxx-xxx"
+                  />
+                  <p id="errCartNumber"><i>enter cart number</i></p>
+                </div>
+                <div class="payment-cart ml-3">
+                  <label class="m-0">CVV</label>
+                  <input
+                    id="cvvNumber"
+                    type="password"
+                    class="m-0"
+                    placeholder="xxxx"
+                  />
+                  <p id="errPassNumber"><i>enter CVV number</i></p>
+                </div>
+              </div>
+              <button onclick="handleOrder()" class="boxed-btn mt-3">
+                Place Order
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <footer class="text-center text-lg-start bg-light text-muted">
       <!-- Section: Social media -->
       <section
@@ -311,9 +359,6 @@
     </footer>
   </body>
   <script src="/utils/method.js"></script>
-  <script src="script.js"></script>
-  
   <script src="/models/data.js"></script>
   <script src="/src/pages/components/header.js"></script>
-</html>
 </html>

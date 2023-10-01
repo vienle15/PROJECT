@@ -1,0 +1,121 @@
+.checkout-section {
+  padding: 0;
+  background-color: #fff;
+}
+
+.checkout-accordion-wrap {
+  margin-top: 30px;
+}
+
+.card {
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.card-header {
+  padding: 15px 20px;
+  background-color: #f8f9fa;
+}
+
+.card-header h5 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+.card-header a {
+  color: #333;
+}
+
+.card-body {
+  padding: 15px 20px;
+}
+
+.billing-address-form {
+  width: 100%;
+}
+
+.billing-address-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.billing-address-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.order-details-wrap {
+  margin-top: 30px;
+}
+
+.order-details {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.order-details th,
+.order-details td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.order-details th {
+  background-color: #f8f9fa;
+}
+
+.order-details-body {
+  display: none;
+}
+
+.checkout-details {
+  margin-top: 20px;
+}
+
+.checkout-details td {
+  font-weight: 500;
+}
+
+.full-payment {
+  margin-top: 20px;
+}
+
+.payment-delivery,
+.payment-cart {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.payment-delivery label,
+.payment-cart label {
+  font-weight: 500;
+}
+
+.payment-delivery input,
+.payment-cart input {
+  vertical-align: middle;
+}
+
+.boxed-btn {
+  background-color: #000;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.boxed-btn:hover {
+  background-color: #333;
+}
+.btn-link {
+  text-decoration: none;
+  text-transform: uppercase;
+}

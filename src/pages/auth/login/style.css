@@ -20,9 +20,13 @@ button.login:hover {
   cursor: pointer;
 }
 .card {
-  width: 600px !important;
+  width: 400px !important;
+  margin: 0 auto;
+  display: block !important;
 }
-.login-input {
+.card-body .m-sm-4 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <title>Cart</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -31,6 +31,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
@@ -56,7 +57,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link"
-                  href="src/pages/customer/products/index.html"
+                  href="/src/pages/customer/products/index.html"
                   >Products</a
                 >
               </li>
@@ -84,107 +85,120 @@
         </div>
       </nav>
     </header>
+    <div class="container">
+      <div class="heading">
+        <h1><span class="shopper">s</span> Shopping Cart</h1>
 
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
-          <div class="d-table-cell align-middle">
-            <div class="text-center mt-4">
-              <p class="lead">Fill The Form To Register</p>
+        <a href="#" class="visibility-cart transition is-open">X</a>
+      </div>
+
+      <div class="cart transition is-open">
+        <div class="table">
+          <div class="layout-inline row th">
+            <div class="col col-pro">Product</div>
+            <div class="col col-price align-center">Price</div>
+            <div class="col col-qty align-center">QTY</div>
+            <div class="col">VAT</div>
+            <div class="col">Total</div>
+          </div>
+
+          <div class="layout-inline row">
+            <div class="col col-pro layout-inline">
+              <img src="/src/assets/images/stan-smith.webp" alt="shoes" />
+              <p>Stan Smith</p>
             </div>
 
-            <div class="card">
-              <div class="card-body">
-                <div class="m-sm-4">
-                  <form id="myForm">
-                    <div class="form-group">
-                      <label for="name">Họ tên</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="name"
-                        placeholder="Nhập tên của bạn"
-                        id="name"
-                      />
-                      <p class="error" id="error-name"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="address">Địa chỉ</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="name"
-                        placeholder="Nhập địa chỉ của bạn"
-                        id="address"
-                      />
-                      <p class="error" id="error-address"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="mail"
-                        name="name"
-                        placeholder="Nhập Email của bạn"
-                        id="email"
-                      />
-                      <p class="error" id="error-email"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="phone">Số điện thoại</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="tel"
-                        name="name"
-                        placeholder="Nhập số điện thoại của bạn"
-                        id="phone"
-                      />
-                      <p class="error" id="error-phone"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Mật khẩu</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="password"
-                        name="password"
-                        placeholder="nhập mật khẩu"
-                        id="password"
-                      />
-                      <p class="error" id="error-password"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="password-repeat">Xác nhận mật khẩu</label>
+            <div class="col col-price col-numeric align-center">
+              <p>£59.99</p>
+            </div>
 
-                      <input
-                        class="form-control form-control-lg"
-                        type="password"
-                        name="password"
-                        placeholder="Xác nhận mật khẩu"
-                        id="password-repeat"
-                      />
-                      <p class="error" id="error-repeat-password"></p>
-                    </div>
+            <div class="col col-qty layout-inline">
+              <button class="qty qty-minus">-</button>
+              <input type="numeric" value="3" />
+              <button class="qty qty-plus">+</button>
+            </div>
 
-                    <div class="text-center mt-3">
-                      <!-- <a href="index.html" class="btn btn-lg btn-primary"
-                          >Đăng ký</a
-                        > -->
-                      <button
-                        onclick="handleAdd(event)"
-                        class="btn btn-lg btn-primary"
-                      >
-                        Đăng ký
-                      </button>
-                    </div>
-                  </form>
-                </div>
+            <div class="col col-vat col-numeric">
+              <p>£2.95</p>
+            </div>
+            <div class="col col-total col-numeric"><p>£182.95</p></div>
+          </div>
+
+          <div class="layout-inline row row-bg2">
+            <div class="col col-pro layout-inline">
+              <img src="/src/assets/images/stan-smith.webp" alt="shoes" />
+              <p>Stan Smith</p>
+            </div>
+
+            <div class="col col-price col-numeric align-center">
+              <p>£23.99</p>
+            </div>
+
+            <div class="col col-qty layout-inline">
+              <button class="qty qty-minus">-</button>
+              <input type="numeric" value="1" />
+              <button class="qty qty-plus">+</button>
+            </div>
+
+            <div class="col col-vat col-numeric">
+              <p>£1.95</p>
+            </div>
+            <div class="col col-total col-numeric">
+              <p>£25.94</p>
+            </div>
+          </div>
+
+          <div class="layout-inline row">
+            <div class="col col-pro layout-inline">
+              <img src="/src/assets/images/stan-smith.webp" alt="shoes" />
+              <p>Stan Smith</p>
+            </div>
+
+            <div class="col col-price col-numeric align-center">
+              <p>£59.99</p>
+            </div>
+
+            <div class="col col-qty layout-inline">
+              <button class="qty qty-minus">-</button>
+              <input type="numeric" value="3" />
+              <button class="qty qty-plus">+</button>
+            </div>
+
+            <div class="col col-vat col-numeric">
+              <p>£2.95</p>
+            </div>
+            <div class="col col-total col-numeric">
+              <p>£182.95</p>
+            </div>
+          </div>
+
+          <div class="tf">
+            <div class="row layout-inline">
+              <div class="col">
+                <p>VAT</p>
               </div>
+              <div class="col"></div>
+            </div>
+            <div class="row layout-inline">
+              <div class="col">
+                <p>Shipping</p>
+              </div>
+              <div class="col"></div>
+            </div>
+            <div class="row layout-inline">
+              <div class="col">
+                <p>Total</p>
+              </div>
+              <div class="col"></div>
             </div>
           </div>
         </div>
+
+        <a href="/src/pages/customer/Pay/pay.html" class="btn1 btn-update"
+          >Pay</a
+        >
       </div>
     </div>
-
     <footer class="text-center text-lg-start bg-light text-muted">
       <!-- Section: Social media -->
       <section
@@ -311,9 +325,15 @@
     </footer>
   </body>
   <script src="/utils/method.js"></script>
-  <script src="script.js"></script>
-  
   <script src="/models/data.js"></script>
   <script src="/src/pages/components/header.js"></script>
-</html>
+
+  <script src="/assets/js/script.js"></script>
+  <script src="/pages/auth/logout/script.js"></script>
+  <script src="script.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="<KEY>"
+    crossorigin="anonymous"
+  ></script>
 </html>

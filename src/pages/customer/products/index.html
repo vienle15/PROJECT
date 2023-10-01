@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
+    <title>Product</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -51,12 +51,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" href="/index.html">Home</a>
+                <a class="nav-link" href="/index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link"
-                  href="src/pages/customer/products/index.html"
+                  class="nav-link active"
+                  href="/src/pages/customer/products/index.html"
                   >Products</a
                 >
               </li>
@@ -84,107 +84,31 @@
         </div>
       </nav>
     </header>
-
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
-          <div class="d-table-cell align-middle">
-            <div class="text-center mt-4">
-              <p class="lead">Fill The Form To Register</p>
-            </div>
-
-            <div class="card">
-              <div class="card-body">
-                <div class="m-sm-4">
-                  <form id="myForm">
-                    <div class="form-group">
-                      <label for="name">Họ tên</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="name"
-                        placeholder="Nhập tên của bạn"
-                        id="name"
-                      />
-                      <p class="error" id="error-name"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="address">Địa chỉ</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="name"
-                        placeholder="Nhập địa chỉ của bạn"
-                        id="address"
-                      />
-                      <p class="error" id="error-address"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="mail"
-                        name="name"
-                        placeholder="Nhập Email của bạn"
-                        id="email"
-                      />
-                      <p class="error" id="error-email"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="phone">Số điện thoại</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="tel"
-                        name="name"
-                        placeholder="Nhập số điện thoại của bạn"
-                        id="phone"
-                      />
-                      <p class="error" id="error-phone"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Mật khẩu</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="password"
-                        name="password"
-                        placeholder="nhập mật khẩu"
-                        id="password"
-                      />
-                      <p class="error" id="error-password"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="password-repeat">Xác nhận mật khẩu</label>
-
-                      <input
-                        class="form-control form-control-lg"
-                        type="password"
-                        name="password"
-                        placeholder="Xác nhận mật khẩu"
-                        id="password-repeat"
-                      />
-                      <p class="error" id="error-repeat-password"></p>
-                    </div>
-
-                    <div class="text-center mt-3">
-                      <!-- <a href="index.html" class="btn btn-lg btn-primary"
-                          >Đăng ký</a
-                        > -->
-                      <button
-                        onclick="handleAdd(event)"
-                        class="btn btn-lg btn-primary"
-                      >
-                        Đăng ký
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+    <main class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 item-product">
+          <div class="card">
+            <img
+              src="/src/assets/images/stan-smith.webp"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Name asdasdasd</h5>
+              <p class="card-text">Something about this shoes here!!!</p>
+              <p class="card-text">Price:</p>
+              <a
+                onclick="navigationParam('/src/pages/customer/product-detail/index.html','fdfd')"
+                class="btn btn-primary"
+                >Detail</a
+              >
+              <a href="#" class="btn btn-primary">Buy</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </main>
+    <!-- Footer -->
     <footer class="text-center text-lg-start bg-light text-muted">
       <!-- Section: Social media -->
       <section
@@ -309,11 +233,10 @@
       </div>
       <!-- Copyright -->
     </footer>
+    <!-- Footer -->
   </body>
   <script src="/utils/method.js"></script>
-  <script src="script.js"></script>
-  
-  <script src="/models/data.js"></script>
   <script src="/src/pages/components/header.js"></script>
-</html>
+  <script src="product.js"></script>
+  <!-- <script src="/models/data.js"></script> -->
 </html>

@@ -51,7 +51,7 @@ function handleAdd(event) {
 
     localStorage.setItem("accounts", JSON.stringify(accountDB));
     // Điều hướng login
-    window.location.pathname = "/pages/auth/login/index.html";
+    window.location.pathname = "/src/pages/auth/login/index.html";
   } else {
     error.isError = true;
     error.msgEmail =

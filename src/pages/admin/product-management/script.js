@@ -45,6 +45,7 @@ function handleAddEdit(index) {
 }
 
 // renderProduct(productDB);
+
 function renderProduct(productDB) {
   let renderTbody = document.getElementById("tbodyEdit");
   let content = "";
@@ -109,6 +110,24 @@ function editProduct(index) {
   idInput.value = product.productID;
   idInput.disabled = true;
   sizeInput.value = product.productSize;
+}
+function filterProduct() {
+  // Lấy giá trị của ô tìm kiếm
+  const searchValue = document
+    .querySelector("#filterProduct")
+    .value.toLowerCase();
+  const productDB = JSON.parse(localStorage.getItem("productList")) || [];
+  // // Kiểm tra xem giá trị tìm kiếm có hợp lệ không
+  // if (!searchValue || searchValue.trim() === "") {
+  //   return;
+  // }
+
+  // Lọc danh sách sản phẩm theo giá trị tìm kiếm
+  const filteredProducts = productDB.filter((product) => {
+    return product.productName.toLowerCase().includes(searchValue);
+  });
+
+  renderProduct(filteredProducts);
 }
 
 function addProduct() {

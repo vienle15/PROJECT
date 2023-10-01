@@ -3,35 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/src/assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Product Detail</title>
   </head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="/src/assets/css/style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -51,12 +52,12 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" href="/index.html">Home</a>
+                <a class="nav-link" href="/index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link"
-                  href="src/pages/customer/products/index.html"
+                  class="nav-link active"
+                  href="/src/pages/customer/products/index.html"
                   >Products</a
                 >
               </li>
@@ -69,122 +70,117 @@
                 ><i class="fa-solid fa-user fa-beat"></i
               ></a>
 
-              <a
-                href="/src/pages/auth/login/index.html"
-                class="btn btn-outline-success"
-                >Login</a
-              >
-              <a
-                href="/src/pages/auth/login/index.html"
-                class="btn btn-outline-info"
-                >Register</a
-              >
+              <button class="btn btn-outline-success me-3">Login</button>
+              <button class="btn btn-outline-info">Register</button>
             </div>
           </div>
         </div>
       </nav>
     </header>
-
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
-          <div class="d-table-cell align-middle">
-            <div class="text-center mt-4">
-              <p class="lead">Fill The Form To Register</p>
-            </div>
-
-            <div class="card">
-              <div class="card-body">
-                <div class="m-sm-4">
-                  <form id="myForm">
-                    <div class="form-group">
-                      <label for="name">Họ tên</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="name"
-                        placeholder="Nhập tên của bạn"
-                        id="name"
-                      />
-                      <p class="error" id="error-name"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="address">Địa chỉ</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="text"
-                        name="name"
-                        placeholder="Nhập địa chỉ của bạn"
-                        id="address"
-                      />
-                      <p class="error" id="error-address"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="mail"
-                        name="name"
-                        placeholder="Nhập Email của bạn"
-                        id="email"
-                      />
-                      <p class="error" id="error-email"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="phone">Số điện thoại</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="tel"
-                        name="name"
-                        placeholder="Nhập số điện thoại của bạn"
-                        id="phone"
-                      />
-                      <p class="error" id="error-phone"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Mật khẩu</label>
-                      <input
-                        class="form-control form-control-lg"
-                        type="password"
-                        name="password"
-                        placeholder="nhập mật khẩu"
-                        id="password"
-                      />
-                      <p class="error" id="error-password"></p>
-                    </div>
-                    <div class="form-group">
-                      <label for="password-repeat">Xác nhận mật khẩu</label>
-
-                      <input
-                        class="form-control form-control-lg"
-                        type="password"
-                        name="password"
-                        placeholder="Xác nhận mật khẩu"
-                        id="password-repeat"
-                      />
-                      <p class="error" id="error-repeat-password"></p>
-                    </div>
-
-                    <div class="text-center mt-3">
-                      <!-- <a href="index.html" class="btn btn-lg btn-primary"
-                          >Đăng ký</a
-                        > -->
-                      <button
-                        onclick="handleAdd(event)"
-                        class="btn btn-lg btn-primary"
-                      >
-                        Đăng ký
-                      </button>
-                    </div>
-                  </form>
+    <main class="container">
+      <div class="card">
+        <div class="container-fliud">
+          <div class="wrapper row">
+            <div class="preview col-md-6">
+              <div class="preview-pic tab-content">
+                <div class="tab-pane active" id="pic-1">
+                  <img src="/src/assets/images/stan-smith.webp" />
                 </div>
+                <div class="tab-pane" id="pic-2">
+                  <img src="/src/assets/images/stan-smith.webp" />
+                </div>
+                <div class="tab-pane" id="pic-3">
+                  <img src="/src/assets/images/stan-smith.webp" />
+                </div>
+                <div class="tab-pane" id="pic-4">
+                  <img src="/src/assets/images/stan-smith.webp" />
+                </div>
+                <div class="tab-pane" id="pic-5">
+                  <img src="/src/assets/images/stan-smith.webp" />
+                </div>
+              </div>
+              <ul class="preview-thumbnail nav nav-tabs">
+                <li class="active">
+                  <a data-target="#pic-1" data-toggle="tab"
+                    ><img src="/src/assets/images/stan-smith.webp"
+                  /></a>
+                </li>
+                <li>
+                  <a data-target="#pic-2" data-toggle="tab"
+                    ><img src="/src/assets/images/stan-smith.webp"
+                  /></a>
+                </li>
+                <li>
+                  <a data-target="#pic-3" data-toggle="tab"
+                    ><img src="/src/assets/images/stan-smith.webp"
+                  /></a>
+                </li>
+                <li>
+                  <a data-target="#pic-4" data-toggle="tab"
+                    ><img src="/src/assets/images/stan-smith.webp"
+                  /></a>
+                </li>
+                <li>
+                  <a data-target="#pic-5" data-toggle="tab"
+                    ><img src="/src/assets/images/stan-smith.webp"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="details col-md-6">
+              <h3 class="product-title">men's shoes fashion</h3>
+              <div class="rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <span class="review-no">41 reviews</span>
+              </div>
+              <p class="product-description">
+                Suspendisse quos? Tempus cras iure temporibus? Eu laudantium
+                cubilia sem sem! Repudiandae et! Massa senectus enim minim
+                sociosqu delectus posuere.
+              </p>
+              <h4 class="price">current price: <span>$180</span></h4>
+              <p class="vote">
+                <strong>91%</strong> of buyers enjoyed this product!
+                <strong>(87 votes)</strong>
+              </p>
+              <h5 class="sizes">
+                sizes:
+                <span class="size" data-toggle="tooltip" title="small">7</span>
+                <span class="size" data-toggle="tooltip" title="medium">8</span>
+                <span class="size" data-toggle="tooltip" title="large">9</span>
+                <span class="size" data-toggle="tooltip" title="xtra large"
+                  >10</span
+                >
+              </h5>
+              <h5 class="colors">
+                colors:
+                <span
+                  class="color orange not-available"
+                  data-toggle="tooltip"
+                  title="Not In store"
+                ></span>
+                <span class="color green"></span>
+                <span class="color blue"></span>
+              </h5>
+              <div class="action">
+                <button class="add-to-cart btn btn-default" type="button">
+                  add to cart
+                </button>
+                <button class="like btn btn-default" type="button">
+                  <span class="fa fa-heart"></span>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </main>
     <footer class="text-center text-lg-start bg-light text-muted">
       <!-- Section: Social media -->
       <section
@@ -311,9 +307,9 @@
     </footer>
   </body>
   <script src="/utils/method.js"></script>
-  <script src="script.js"></script>
-  
   <script src="/models/data.js"></script>
   <script src="/src/pages/components/header.js"></script>
-</html>
+  <script src="script.js"></script>
+  <script src="/assets/js/script.js"></script>
+  <script src="/pages/auth/logout/script.js"></script>
 </html>
