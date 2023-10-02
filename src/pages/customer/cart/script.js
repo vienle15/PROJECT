@@ -1,65 +1,3 @@
-// $(".visibility-cart").on("click", function () {
-//   var $btn = $(this);
-//   var $cart = $(".cart");
-//   console.log($btn);
-
-//   if ($btn.hasClass("is-open")) {
-//     $btn.removeClass("is-open");
-//     $btn.text("O");
-//     $cart.removeClass("is-open");
-//     $cart.addClass("is-closed");
-//     $btn.addClass("is-closed");
-//   } else {
-//     $btn.addClass("is-open");
-//     $btn.text("X");
-//     $cart.addClass("is-open");
-//     $cart.removeClass("is-closed");
-//     $btn.removeClass("is-closed");
-//   }
-// });
-
-// // SHOPPING CART PLUS OR MINUS
-// $("a.qty-minus").on("click", function (e) {
-//   e.preventDefault();
-//   var $this = $(this);
-//   var $input = $this.closest("div").find("input");
-//   var value = parseInt($input.val());
-
-//   if (value > 1) {
-//     value = value - 1;
-//   } else {
-//     value = 0;
-//   }
-
-//   $input.val(value);
-// });
-
-// $("a.qty-plus").on("click", function (e) {
-//   e.preventDefault();
-//   var $this = $(this);
-//   var $input = $this.closest("div").find("input");
-//   var value = parseInt($input.val());
-
-//   if (value < 100) {
-//     value = value + 1;
-//   } else {
-//     value = 100;
-//   }
-
-//   $input.val(value);
-// });
-
-// // RESTRICT INPUTS TO NUMBERS ONLY WITH A MIN OF 0 AND A MAX 100
-// $("input").on("blur", function () {
-//   var input = $(this);
-//   var value = parseInt($(this).val());
-
-//   if (value < 0 || isNaN(value)) {
-//     input.val(0);
-//   } else if (value > 100) {
-//     input.val(100);
-//   }
-// });
 function renderCart() {
   let userLogin = getDataFromLocalStorage("userLogin");
   let userAcccount = getDataFromLocalStorage("accounts");
@@ -90,9 +28,9 @@ function renderCart() {
     </div>
 
     <div class="col col-qty layout-inline">
-      <button  class="qty qty-minus">-</button>
-        <input type="numeric" value="1" />
-      <button class="qty qty-plus">+</button>
+      <button  class="qty qty-minus" onclick="_handleMinus(${element.productID})">-</button>
+        <input type="numeric" value="${element.quantityNumber}" />
+      <button class="qty qty-plus" onclick="_handlePlus(${element.productID})">+</button>
     </div>
     
     <div class="col col-vat col-numeric">
@@ -105,3 +43,40 @@ function renderCart() {
   cartTable.innerHTML = cartResult;
 }
 renderCart();
+
+function _handlePlus(id) {
+  console.log("id", id);
+  let userLogin = getDataFromLocalStorage("userLogin");
+  let userAcccount = getDataFromLocalStorage("accounts");
+  let accountCartInfo = userAcccount.filter(
+    (element) => element.email === userLogin.email
+  );
+  let cart = accountCartInfo[0].cart;
+  console.log("cart", cart);
+  let cartItem = cart.find((element) => element.productID === String(id));
+  cartItem.quantityNumber++;
+  cartItem.totalPrice = cartItem.quantityNumber * cartItem.productPrice;
+  accountCartInfo[0].cart = cart;
+  localStorage.setItem("accounts", JSON.stringify(userAcccount));
+  renderCart();
+}
+
+function _handleMinus(id) {
+  let userLogin = getDataFromLocalStorage("userLogin");
+  let userAcccount = getDataFromLocalStorage("accounts");
+  let accountCartInfo = userAcccount.filter(
+    (element) => element.email === userLogin.email
+  );
+  let cart = accountCartInfo[0].cart;
+  let cartItem = cart.find((element) => element.productID === String(id));
+  // nếu số lượng = 0 thì xóa sản phẩm khỏi giỏ hàng
+  if (cartItem.quantityNumber === 1) {
+    cart = cart.filter((element) => element.productID !== String(id));
+  } else {
+    cartItem.quantityNumber--;
+  }
+  cartItem.totalPrice = cartItem.quantityNumber * cartItem.productPrice;
+  accountCartInfo[0].cart = cart;
+  localStorage.setItem("accounts", JSON.stringify(userAcccount));
+  renderCart();
+}

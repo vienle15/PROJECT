@@ -130,12 +130,21 @@ function addCart(productID) {
   }
 
   for (let i = 0; i < pList.length; i++) {
-    if (pList[i].productID === productID) {
-      pList[i].quantity = 1;
-      cartInfo.push(pList[i]);
-      console.log("32443", cartInfo);
-      console.log(222, pList[i]);
-      alert("Added To Cart");
+    // nếu đã có trong cart thì tăng số lượng, không thì thêm mới vào cart
+    // thêm một trường là quantityNumber cho sản phẩm trong cart
+    if (pList[i].productID == productID) {
+      let check = false;
+      for (let j = 0; j < cartInfo.length; j++) {
+        if (cartInfo[j].productID == productID) {
+          cartInfo[j].quantityNumber++;
+          check = true;
+        }
+      }
+      if (!check) {
+        pList[i].quantityNumber = 1;
+        cartInfo.push(pList[i]);
+      }
+      alert("Add Success!");
     }
   }
 

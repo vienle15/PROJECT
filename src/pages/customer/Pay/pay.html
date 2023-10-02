@@ -33,6 +33,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -361,4 +362,92 @@
   <script src="/utils/method.js"></script>
   <script src="/models/data.js"></script>
   <script src="/src/pages/components/header.js"></script>
+
+  <script>
+    function addInfor() {
+      let name = document.getElementById("reName").value;
+      let email = document.getElementById("reEmail").value;
+      let address = document.getElementById("reAddress").value;
+      let phone = document.getElementById("rePhone").value;
+      let note = document.getElementById("note").value;
+      let paymentMethod = document.querySelector(
+        'input[name="paymentMethod"]:checked'
+      ).value;
+      let cartNumber = document.getElementById("cartNumber").value;
+      let cvvNumber = document.getElementById("cvvNumber").value;
+      let errCartNumber = document.getElementById("errCartNumber");
+      let errPassNumber = document.getElementById("errPassNumber");
+      if (paymentMethod == "payment") {
+        if (cartNumber == "") {
+          errCartNumber.style.display = "block";
+          return;
+        }
+        if (cvvNumber == "") {
+          errPassNumber.style.display = "block";
+          return;
+        }
+      }
+      let infor = {
+        name: name,
+        email: email,
+        address: address,
+        phone: phone,
+        note: note,
+        paymentMethod: paymentMethod,
+        cartNumber: cartNumber,
+        cvvNumber: cvvNumber,
+      };
+      localStorage.setItem("infor", JSON.stringify(infor));
+      alert("Order success");
+    }
+
+    function handleOrder() {
+      let sum = 0;
+      let data = JSON.parse(localStorage.getItem("cart"));
+      let show = document.getElementById("show");
+      let sumPrice = document.getElementById("sum");
+      let html = "";
+      for (let i = 0; i < data.length; i++) {
+        let price = data[i].price * data[i].quantity;
+        sum += price;
+        html += `
+          <tr>
+            <td>${data[i].name} x ${data[i].quantity}</td>
+            <td>${data[i].price}$</td>
+            <td>${price}$</td>
+          </tr>
+        `;
+      }
+      show.innerHTML = html;
+      sumPrice.innerHTML = sum + 45 + "$";
+      addInfor();
+    }
+
+    function handlePayment() {
+      let payment = document.getElementById("form-payment");
+      let paymentMethod = document.querySelector(
+        'input[name="paymentMethod"]:checked'
+      ).value;
+      if (paymentMethod == "payment") {
+        payment.style.display = "block";
+      } else {
+        payment.style.display = "none";
+      }
+    }
+
+    window.onload = function () {
+      let paymentMethod = document.querySelector(
+        'input[name="paymentMethod"]:checked'
+      ).value;
+      if (paymentMethod == "payment") {
+        handlePayment();
+      }
+    };
+
+    document
+      .querySelector('input[name="paymentMethod"]')
+      .addEventListener("change", function () {
+        handlePayment();
+      });
+  </script>
 </html>
