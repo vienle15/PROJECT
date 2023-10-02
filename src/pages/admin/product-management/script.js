@@ -55,7 +55,7 @@ function renderProduct(productDB) {
       <tr>
           <td class="text-nowrap align-middle">
             <div class="d-flex justify-content-center">
-              <img src="../${product.productImg}" alt="" class="img-fluid" />
+              <img src="${product.productImg}" alt="" class="img-fluid" />
              
             </div>
           </td>

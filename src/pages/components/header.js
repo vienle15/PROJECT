@@ -9,9 +9,7 @@ if (userLogin) {
 <button class="btn btn-outline-success" onclick="logOut()">Log out</button>
 `;
 } else {
-  featureElement.innerHTML = ` <a href="/src/pages/customer/cart/index.html"><i class="fa-solid fa-cart-plus fa-beat feature"
-  ></i> ( 0 )</a
-  >
+  featureElement.innerHTML = `
   <a
   href="/src/pages/auth/login/index.html"
   class="btn btn-outline-success"

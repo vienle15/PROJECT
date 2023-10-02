@@ -118,21 +118,35 @@ showProduct();
 function addCart(productID) {
   console.log("222222", productID);
   let pList = getDataFromLocalStorage("productList") || [];
+  console.log("pList", pList);
   let userLogin = getDataFromLocalStorage("userLogin");
   let accountDB = getDataFromLocalStorage("accounts");
-  let cartInfo = [];
+  let cartInfo;
+  // lấy cart trong local
+  for (const accounts of accountDB) {
+    if (accounts.email === userLogin.email) {
+      cartInfo = accounts.cart || [];
+    }
+  }
+
   for (let i = 0; i < pList.length; i++) {
     if (pList[i].productID === productID) {
+      pList[i].quantity = 1;
       cartInfo.push(pList[i]);
+      console.log("32443", cartInfo);
       console.log(222, pList[i]);
       alert("Added To Cart");
     }
   }
+
+  // đưa lại local
   for (const accounts of accountDB) {
     if (accounts.email === userLogin.email) {
       accounts.cart = cartInfo;
+      setDataFromLocalStorage("accounts", accountDB);
+      return;
     }
   }
-  setDataFromLocalStorage("accounts", accountDB);
+
   console.log(333, cartInfo);
 }
